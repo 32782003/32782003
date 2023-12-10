@@ -1,19 +1,26 @@
 #include <stdio.h>
-int main()
+int main ()
 {
 
-int i,n,sum,f;
+int num,sum,i;
 sum=0;
-f=1;
-    for ( i = 0; i <10; i++)
-    {
-       printf("enter a number:");
-       scanf("%d",&n);
-       sum+=n;
-       f*=n;
-    }
-    printf("sum :%d , product:%d ",sum,f);
+printf("enter a number:");
+scanf("%d:",&num);
+for ( i = 1; i <=num/2; i++)
+{
+   if (num%i==0)
+   {
+      sum+=i;
+   }
+  
 
-    return 0;
+}
+if (num==sum)
+{
+   printf("perfect number:%d",num);
+}
+else 
+     printf("not a perfect number:(");
+
 
 }

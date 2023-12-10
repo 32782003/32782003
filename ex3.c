@@ -1,18 +1,14 @@
 #include <stdio.h>
-
 int main ()
 {
-    int n;
- printf("enter a number:");
-scanf("%d",&n);
-if (n%2==0)
+    int i;
+  for ( i = 0; i < 10; i++)
 
-printf("n is even");
-else 
-  printf("n is odd");
-
+  {
+    printf("HELLO WORLD \3 \n");
+  }
+  
 
 
-return 0;
 
 }

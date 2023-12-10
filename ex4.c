@@ -1,23 +1,15 @@
-#include <stdio.h>
- int main ()
- {
-   int temp,fp;
-   fp=0;
+#include<stdio.h>
+int main()
+{ int i,sum;
+sum=0;
+   for ( i = 0; i < 50; i++)
+   {
+    sum +=i;
+
+   }
    
-   printf("enter the temperature;");
-   scanf("%d",&temp);
-
-   if (temp>fp)
-   { printf("above the freezing point");
- }
-  else if (temp<fp)
-
-  {
-    printf("below the freezing point");
-  }
-     return 0;
-
-   
+   printf("sum:%d",sum);
 
 
- }
+
+}

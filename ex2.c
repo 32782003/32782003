@@ -1,22 +1,20 @@
 #include <stdio.h>
-
+#include<math.h>
 int main ()
-
 {
-int r;
-float area;
-const float PI=3.14;
+int a , b,c,r,z;
 
+printf("enter a number");
+scanf("%d",&a);
+printf("enter a number");
+scanf("%d",&b);
+printf("enter a number");
+scanf("%d",&c);
 
-printf("enter the radius;");
-scanf("%d",&r);
-area=PI*r*r;
-printf("area:%f",area);
+r=(-b-(sqrt(pow(b,2)-4*a*c)))/(2*a);
+z=(-b+(sqrt(pow(b,2)-4*a*c)))/(2*a);
 
-return 0;
-
-
-
+printf("roots :%d,%d",r,z);
 
 
 }

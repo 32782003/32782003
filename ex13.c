@@ -1,11 +1,32 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
-{ int i,mt;
-for ( i = 0; i < 11; i++)
 {
-    mt=i*6;
-    printf("%d x %d = %d \n",i,6,mt);
+    int num,sum,i,f,k,a;
+printf ("enter a number:");
+scanf("%d",&num);
+a=num;
+sum=0;
+
+while (num>0)
+{f=1;
+  k=num%10;
+  for ( i = 1; i <=k; i++)
+  {
+    f*=i;
+    
+  }sum+=f;
+  
+  num=num/10;
 }
+if (a==sum)
+{
+   printf("strong number:)");
+}
+else 
+printf("not a strong number");
+
+
+
 
 
 

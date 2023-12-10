@@ -1,14 +1,30 @@
-#include <stdio.h>
-int main()
+#include<stdio.h>
+int main ()
 {
-int i,c;
-c=0;
-for ( i = 0; i <101; i+=5)
-{
-    printf("%d\n",i);
-          c++;
+   int num,sum,i,j;
+   printf("enter a number:");
+   scanf("%d",&num);
 
-}
-printf("%d",c);
- return 0;
+   for ( i = 1; i <=num; i++)
+   {
+    sum=0;
+      for ( j = 1; j <=i/2; j++)
+      {
+        if (i%j==0)
+        {
+          sum+=j;
+        }
+      
+      }
+        if (sum==i)
+        {
+            printf("perfect number:%d\n",i);
+
+        }
+        
+   }
+   
+
+
+
 }

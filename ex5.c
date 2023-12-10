@@ -1,14 +1,16 @@
-# include <stdio.h>
-int main ()
+#include <stdio.h>
+int main()
 {
- int f;
- float c;
+    int i,j,k,l,m;
+    printf("enter the 1. number:");
+    scanf("%d",&k);
+     printf("enter the 2. number:");
+    scanf("%d",&l);
+    j=1;
+    for ( i = 0; i < l; i++)
 
- printf("enter the temperature:");
- scanf("%d",&f);
-
- c=(f-32)/1.8;
- printf("celsius;%f",c);
- return 0;
-
+    {
+          j*=k;
+    }
+    printf("pow:%d",j);
 }

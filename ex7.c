@@ -1,18 +1,32 @@
-#include<stdio.h>
+# include<stdio.h>
 int main()
 {
-    int i,s;
-    i=1;
+   int i,n,m,j;
+   printf("enter a number:");
+    scanf("%d",&n);
     
-    while (i<11)
-    {
-        s=i*i;
-        printf("%d x %d = %d \n",i,i,s);
-        i++;
+    for ( i = 1; i <=n; i++)
+    {    
+        m=0;
+for ( j =1; j <=i; j++)
+{
+    if(i%j==0){
+        m++;
+    }
+    
+   
+}
+    if(m==2){
+        printf("%d\t",i);
+    }
+    }
     
 
-      
-       
-    }
-    return 0;
+   
+     return 0;
+   
+     
+
+
+
 }
