@@ -1,0 +1,30 @@
+// fibonacci
+#include <stdio.h>
+#include <string.h>
+int main() 
+   {   
+       
+     int A[20],i,a,b,c;
+     A[0]=1;
+     A[1]=1;
+     printf("A[0]=1\n");
+     printf("A[1]=1\n");
+     
+     for(i=2;i<20;i++)
+     {
+      
+       a=A[i-1];
+       b=A[i-2];
+       c=a+b;
+       A[i]=c;
+        
+        
+         printf("A[%d]=%d\n",i,A[i]);
+       
+       
+        
+         
+     }
+       return 0;
+   }
+   
