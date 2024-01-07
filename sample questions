@@ -1,0 +1,62 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+
+
+int main() {
+    int sayi;
+    
+
+  printf("MATH MENU");
+  printf("-------------------\n\n");
+  printf("1 -Perimeter and area of the square\n");
+  printf("2 -cube the entered number\n");
+  printf("3 -Area and perimeter of a circle\n");
+  printf("4 -4-5x2+7x9 =");
+  printf("\nenter the number of list: ");
+  scanf("%d",&sayi);
+  switch(sayi)
+  {
+      case 1:
+          int a,b,p,k;
+           printf("enter the side lenght: ");
+           scanf("%d %d",&a,&b);
+           p=2*(a+b);
+           k=a*b;
+           printf("your perimeter is :%d||your area is:%d",p,k);break;
+       case 2: 
+           int c,m;
+           printf("enter a number: ");
+           scanf("%d",&c);
+           m=c*c*c;
+           printf("cube of the entered number:%d ",m);break;
+           case 3:
+           int r;
+           float cr,n,pi;
+              pi=3.14;
+               printf("enter the radıus: ");
+               scanf("%d",&r);
+               n=2*pi*r;
+               cr=pi*r*r;
+               printf("your circle's perimeter :%f and area:%f",n,cr);break;
+               case 4:
+                int x,o;
+                printf("enter the x value: ");
+                scanf("%d",&x);
+                o=(-4)-(5*x*2)+(7*9*x);
+                printf("problem's answer is : %d",o);break;
+
+               
+               
+           
+           
+           
+           
+      
+      
+      
+      
+  }
+  
+    return 0;
+}
