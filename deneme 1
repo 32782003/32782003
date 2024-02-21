@@ -1,0 +1,96 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(NULL));
+    int lot, lot1, lot2, hisse;
+
+    float patek, tupras, ardyz, kalan, patek1 = 0, tupras1 = 0, ardyz1 = 0, butce, kasa;
+
+    printf("bütçenizi giriniz: ");
+    scanf("%f", &butce);
+    kalan = butce;
+    kasa = butce;
+
+    while (kalan > 0) {
+        printf("Hangi hisseye yatırım yapmak istediğinizi seçiniz: 1) PATEK, 2) TUPRAS, 3) ARDYZ, 4) Çıkış\n");
+        scanf("%d", &hisse);
+
+        switch (hisse) {
+            case 1:
+                printf("Kaç lot almak istiyorsunuz: ");
+                scanf("%d", &lot);
+                patek = 30.45;
+                patek1 += patek * lot;
+                kalan = butce - patek1;
+                butce = kalan;
+                printf("%f kalan paranız\n", kalan);
+                break;
+            case 2:
+                printf("Kaç lot almak istiyorsunuz: ");
+                scanf("%d", &lot1);
+                tupras = 50.15;
+                tupras1 += tupras * lot1;
+                kalan = butce - tupras1;
+                butce = kalan;
+                printf("%f kalan paranız\n", kalan);
+                break;
+            case 3:
+                printf("Kaç lot almak istiyorsunuz: ");
+                scanf("%d", &lot2);
+                ardyz = 61.25;
+                ardyz1 += ardyz * lot2;
+                kalan = butce - ardyz1;
+                butce = kalan;
+                printf("%f kalan paranız\n", kalan);
+                break;
+            case 4:
+                printf("Çıkış yapılıyor...\n");
+                exit(0);
+            default:
+                printf("Yanlış hisse kodu girdiniz. Lütfen tekrar deneyiniz.\n");
+                break;
+        }
+    }
+
+    printf("Hadi artık gerçek borsaya geçelim:)\n");
+    float kar, kar1, kar2, total = 0, p, t, a;
+
+    while (total == 0) {
+        printf("Hangi hisse karını görmek istiyorsunuz: 1) P, 2) T, 3) A, 4) Toplam, 5) Çıkış\n");
+        scanf("%d", &hisse);
+
+        switch (hisse) {
+            case 1:
+                p = 1 + (rand() % 10);
+                kar = (patek1 * p) / 100;
+                printf("Toplam patekte karınız: %f\n", kar);
+                break;
+            case 2:
+                t = 1 + (rand() % 10);
+                kar1 = (tupras1 * t) / 100;
+                printf("Toplam tupras karınız: %f\n", kar1);
+                break;
+            case 3:
+                a = 1 + (rand() % 10);
+                kar2 = (ardyz1 * a) / 100;
+                printf("Toplam ardyz karınız: %f\n", kar2);
+                break;
+            case 4:
+                total = kar + kar1 + kar2;
+                printf("Toplam hisse karınız: %f\n", total);
+                break;
+            case 5:
+                printf("Çıkış yapılıyor...\n");
+                exit(0);
+            default:
+                printf("Yanlış hisse kodu girdiniz. Lütfen tekrar deneyiniz.\n");
+                break;
+        }
+    }
+
+    return 0;
+}
+
+    
