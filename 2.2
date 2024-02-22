@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+float hesapla(int sayi,int g)
+{
+    int A[100],not,c=0,total=0;
+    float ort;
+    
+    for(int i=0;i<sayi;i++)
+    {
+       printf("ogrenci notunu giriniz: ");
+       scanf("%d",&not);
+       A[i]=not;
+       total+=A[i];
+       if(A[i]<g)
+       {
+             c++;
+       }
+
+    }
+    ort=total/sayi;
+    printf("kalan kisi sayisi:%d---ortalama:%0.2f",c,ort);
+}
+int main()
+{
+  int no;
+  int gecme;
+  printf("ogrenci sayisini giriniz: ");
+  scanf("%d",&no);
+  if(no<=100)
+  {
+    printf("gecme notunu giriniz: ");
+    scanf("%d",&gecme);
+    hesapla(no,gecme);
+  }
+  else 
+  {
+    while(no>100)
+    {
+         printf("ogrenci sayisini giriniz: ");
+        scanf("%d",&no);
+    }
+    printf("gecme notunu giriniz: ");
+    scanf("%d",&gecme);
+    hesapla(no,gecme);
+    
+  }
+    
+}
