@@ -1,0 +1,23 @@
+#include <stdio.h>
+int f(int n)
+{
+ 
+    if(n==0)
+    {
+        return 0;
+    }
+    else
+    {
+        return (n+f(n-1));
+    }
+    
+}
+int main() {
+   int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    int sonuc=f(n);
+    printf("%d",sonuc);
+
+    return 0;
+}
