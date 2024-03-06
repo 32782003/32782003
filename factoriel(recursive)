@@ -1,0 +1,26 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+int f(int sayi)
+{
+    static int fa=1;
+    
+  if(1!=sayi)
+  {
+      fa*=sayi;
+     
+      return (f(sayi-1));
+     
+  }
+  else 
+  return fa;
+    
+}
+int main() {
+    int sayi;
+    printf("enter your number: ");
+    scanf("%d",&sayi);
+    printf("%d!=%d",sayi,f(sayi));
+  
+
+ 
+}
